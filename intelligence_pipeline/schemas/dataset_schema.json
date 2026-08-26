@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "principles": {
+    "free_public_sources_only": true,
+    "missing_values": "null",
+    "field_level_provenance": true,
+    "time_aware": true,
+    "features_separate_from_labels": true
+  },
+  "tables": {
+    "company_facts": [
+      "fact_id", "company_id", "cin", "field_name", "value", "value_type",
+      "unit", "currency", "period_start", "period_end", "as_of_date",
+      "source_publisher", "source_type", "document_id", "document_title",
+      "document_date", "source_url", "source_page_or_locator", "retrieved_at",
+      "extraction_method", "confidence", "reviewer_status", "notes"
+    ],
+    "relationships": [
+      "relationship_id", "source_entity_type", "source_entity_id", "source_entity_name",
+      "edge_type", "target_entity_type", "target_entity_id", "target_entity_name",
+      "start_date", "end_date", "document_id", "source_url",
+      "source_page_or_locator", "confidence", "reviewer_status"
+    ],
+    "legal_events": [
+      "event_id", "company_id", "cin", "agency_or_court", "action_type",
+      "case_reference", "company_role", "event_date", "allegation", "finding",
+      "amount", "currency", "procedural_status", "outcome", "document_id",
+      "source_url", "source_page_or_locator", "reviewer_status"
+    ],
+    "label_evidence": [
+      "label_evidence_id", "company_id", "cin", "label", "label_status",
+      "confidence", "reason", "authority", "document_id", "document_date",
+      "source_url", "source_page_or_locator", "independently_verified",
+      "exclude_from_features", "reviewer_status"
+    ],
+    "documents": [
+      "document_id", "company_id", "cin", "document_type", "title", "publisher",
+      "document_date", "source_url", "local_path", "sha256", "file_size_bytes",
+      "retrieved_at", "access_class", "notes"
+    ],
+    "conflicts": [
+      "conflict_id", "company_id", "cin", "field_name", "value_a", "source_a",
+      "value_b", "source_b", "conflict_status", "resolution", "reviewer", "reviewed_at"
+    ]
+  }
+}

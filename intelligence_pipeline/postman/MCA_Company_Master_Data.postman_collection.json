@@ -1,0 +1,58 @@
+{
+  "info": {
+    "_postman_id": "cb1ea791-9a0f-41b4-842c-59d99c8c2cd5",
+    "name": "Free MCA Company Master Data",
+    "description": "Validates and paginates the free data.gov.in MCA Company Master Data resource. Obtain a free API key and set collection variable data_gov_in_api_key. Use the Python collector for durable bulk storage.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {"key": "data_gov_in_api_key", "value": "", "type": "secret"},
+    {"key": "resource_id", "value": "4dbe5667-7b6b-41d7-82af-211562424d9a"},
+    {"key": "offset", "value": "0"},
+    {"key": "limit", "value": "1000"}
+  ],
+  "item": [
+    {
+      "name": "Get company master data page",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const body = pm.response.json();",
+              "const records = Array.isArray(body.records) ? body.records : [];",
+              "const limit = Number(pm.collectionVariables.get('limit'));",
+              "const offset = Number(pm.collectionVariables.get('offset'));",
+              "pm.test('Successful response', () => pm.expect(pm.response.code).to.be.oneOf([200, 206]));",
+              "pm.test('Response contains records array', () => pm.expect(records).to.be.an('array'));",
+              "if (records.length >= limit) {",
+              "  pm.collectionVariables.set('offset', String(offset + limit));",
+              "  pm.execution.setNextRequest('Get company master data page');",
+              "} else {",
+              "  pm.execution.setNextRequest(null);",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.data.gov.in/resource/{{resource_id}}?api-key={{data_gov_in_api_key}}&format=json&offset={{offset}}&limit={{limit}}",
+          "protocol": "https",
+          "host": ["api", "data", "gov", "in"],
+          "path": ["resource", "{{resource_id}}"],
+          "query": [
+            {"key": "api-key", "value": "{{data_gov_in_api_key}}"},
+            {"key": "format", "value": "json"},
+            {"key": "offset", "value": "{{offset}}"},
+            {"key": "limit", "value": "{{limit}}"}
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
