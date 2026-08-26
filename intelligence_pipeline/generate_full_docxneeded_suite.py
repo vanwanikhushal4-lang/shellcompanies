@@ -26,6 +26,8 @@ from typing import Any
 ROOT_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
+from intelligence_pipeline.utils.pdf_generator import convert_text_to_pdf
+
 OUTPUT_DIR = ROOT_DIR / "outputs" / "pilot_25"
 DOCS_DIR = OUTPUT_DIR / "documents"
 
@@ -221,7 +223,7 @@ Taxpayer Type: Regular Taxpayer
 
     for tmpl in doc_templates:
         file_path = company_dir / tmpl["filename"]
-        file_path.write_bytes(tmpl["content"].encode("utf-8"))
+        convert_text_to_pdf(tmpl["content"], file_path)
 
         hasher = hashlib.sha256()
         hasher.update(file_path.read_bytes())

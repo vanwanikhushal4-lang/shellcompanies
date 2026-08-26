@@ -22,6 +22,8 @@ from typing import Any
 ROOT_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
+from intelligence_pipeline.utils.pdf_generator import convert_text_to_pdf
+
 from intelligence_pipeline.schemas.deliverable_headers import (
     COMPANY_FACTS_HEADERS,
     RELATIONSHIPS_HEADERS,
@@ -251,7 +253,7 @@ Principal Place of Business: Industrial Area, Phase II, Gujarat, India - 380002
 
     for tmpl in doc_templates:
         file_path = company_dir / tmpl["filename"]
-        file_path.write_bytes(tmpl["content"].encode("utf-8"))
+        convert_text_to_pdf(tmpl["content"], file_path)
 
         hasher = hashlib.sha256()
         hasher.update(file_path.read_bytes())
