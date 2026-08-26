@@ -1,7 +1,8 @@
 """Subagent 2: Document Discovery Agent
 
 Searches freely available public sources (NSE, BSE, CRISIL, ICRA, CARE, Acuité, court registries, IR websites)
-given company identifiers (CIN, name, aliases). Registers discovered public documents in document_manifest.csv.
+given company identifiers (CIN, name, aliases). Registers discovered public documents in document_manifest.csv,
+organizing files company-by-company in company-specific subfolders.
 """
 
 from __future__ import annotations
@@ -22,16 +23,26 @@ class DocDiscoveryAgent:
         raw = f"{cin}:{doc_type}:{title}"
         return f"DOC_{hashlib.sha256(raw.encode()).hexdigest()[:12].upper()}"
 
-    def discover_local_documents(self, cin: str, company_dir: Path) -> list[dict[str, Any]]:
-        """Index pre-existing free public documents in local doc/ folder."""
+    def clean_folder_name(self, name: str) -> str:
+        clean = re.sub(r'[\\/*?:"<>|]', "_", name).strip()
+        return clean or "UNNAMED_COMPANY"
+
+    def discover_local_documents(self, cin: str, company_name: str, company_dir: Path) -> list[dict[str, Any]]:
+        """Index pre-existing free public documents in local doc/ folder into company-wise subfolders."""
         manifest_entries: list[dict[str, Any]] = []
         if not company_dir.exists():
             return manifest_entries
 
+        folder_name = self.clean_folder_name(company_name)
+
         for file_path in company_dir.rglob("*"):
             if file_path.is_file() and not file_path.name.startswith("."):
                 doc_type = self._infer_doc_type(file_path)
-                rel_path = str(file_path.relative_to(company_dir.parent.parent))
+                
+                # Determine relative file path inside company subfolder
+                rel_inside_comp = file_path.relative_to(company_dir)
+                local_rel_filename = f"documents/{folder_name}/{rel_inside_comp}"
+
                 hasher = hashlib.sha256()
                 hasher.update(file_path.read_bytes())
                 sha256_hash = hasher.hexdigest()
@@ -45,9 +56,12 @@ class DocDiscoveryAgent:
                     "publisher": "MCA / Official Corporate Filing",
                     "document_date": self._extract_date_from_filename(file_path.name),
                     "download_url": f"file://{file_path.resolve()}",
-                    "local_filename": rel_path,
+                    "local_filename": local_rel_filename,
                     "file_hash": sha256_hash,
-                    "retrieved_at": "2026-08-26T00:00:00Z"
+                    "retrieved_at": "2026-08-26T00:00:00Z",
+                    "source_path": str(file_path.resolve()),
+                    "company_folder": folder_name,
+                    "rel_inside_comp": str(rel_inside_comp)
                 })
         return manifest_entries
 
@@ -85,4 +99,4 @@ class DocDiscoveryAgent:
 
 
 if __name__ == "__main__":
-    print("DocDiscoveryAgent initialized successfully.")
+    print("DocDiscoveryAgent company-wise sorting module loaded.")

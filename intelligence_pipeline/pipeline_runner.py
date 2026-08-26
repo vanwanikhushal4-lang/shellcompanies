@@ -2,10 +2,11 @@
 
 Runs all 8 subagents across the 25-company pilot benchmark, enforcing strict rules:
 - Free public data only
+- Company-wise folder structure for documents (documents/<company_name>/...)
 - No dummy strings or unverified values (missing values = null)
 - Separation of legal allegations vs. adjudicated findings
 - Zero label leakage (network signals kept out of ground-truth labels)
-- Deliverables export: 7 CSV files + documents/ directory
+- Deliverables export: 7 CSV files + documents/ directory structure
 """
 
 from __future__ import annotations
@@ -39,8 +40,14 @@ def run_pipeline() -> None:
 
     seed_companies: list[dict[str, Any]] = json.loads(SEED_PILOT_PATH.read_text(encoding="utf-8"))
 
+    # Reset/clean documents directory to ensure fresh folder-wise sorting
+    docs_output_dir = OUTPUT_DIR / "documents"
+    if docs_output_dir.exists():
+        shutil.rmtree(docs_output_dir)
+    docs_output_dir.mkdir(parents=True, exist_ok=True)
+
     # Initialize subagents
-    doc_discovery = DocDiscoveryAgent(documents_dir=OUTPUT_DIR / "documents")
+    doc_discovery = DocDiscoveryAgent(documents_dir=docs_output_dir)
     pdf_extractor = PDFExtractionAgent()
     legal_agent = LegalEventAgent()
     entity_resolver = EntityResolutionAgent()
@@ -100,18 +107,18 @@ def run_pipeline() -> None:
         doc_dir_str = comp.get("doc_dir")
         if doc_dir_str:
             comp_doc_dir = Path(doc_dir_str)
-            manifest_entries = doc_discovery.discover_local_documents(cin, comp_doc_dir)
-            all_document_manifest.extend(manifest_entries)
+            manifest_entries = doc_discovery.discover_local_documents(cin, company_name, comp_doc_dir)
 
             for entry in manifest_entries:
-                local_path = comp_doc_dir.parent.parent / entry["local_filename"]
-                if local_path.exists():
-                    # Copy file to outputs/pilot_25/documents/
-                    target_doc_path = OUTPUT_DIR / "documents" / Path(entry["local_filename"]).name
-                    shutil.copy2(local_path, target_doc_path)
+                src_path = Path(entry["source_path"])
+                if src_path.exists():
+                    # Create company-wise folder: outputs/pilot_25/documents/<company_folder>/<rel_path>
+                    target_doc_path = docs_output_dir / entry["company_folder"] / entry["rel_inside_comp"]
+                    target_doc_path.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(src_path, target_doc_path)
 
                     # Extract text & facts
-                    pages = pdf_extractor.extract_pdf_content(local_path)
+                    pages = pdf_extractor.extract_pdf_content(src_path)
                     for page in pages:
                         extracted_facts = pdf_extractor.parse_facts_from_page(page, entry)
                         for ef in extracted_facts:
@@ -133,8 +140,11 @@ def run_pipeline() -> None:
                             })
                             all_legal_events.extend(l_events)
 
+                # Clean entry before appending to manifest (remove temporary keys)
+                manifest_row = {k: v for k, v in entry.items() if k not in ("source_path", "company_folder", "rel_inside_comp")}
+                all_document_manifest.append(manifest_row)
+
         # 3. Network Edges (Graph Building)
-        # Register address edge
         all_relationships.append(graph_builder.build_address_edge(
             cin=cin,
             company_name=company_name,
@@ -143,7 +153,6 @@ def run_pipeline() -> None:
         ))
 
         # 4. Official Label Evidence (Ground Truth isolation)
-        # Check if company has an official MCA/ED/NCLT action
         if "struck" in company_name.lower() or "shell" in company_name.lower():
             all_label_evidence.append({
                 "CIN": cin,
