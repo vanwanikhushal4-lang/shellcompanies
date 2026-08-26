@@ -1,0 +1,402 @@
+[
+  {
+    "company_id": "COMP_L17111GJ1984PLC045995",
+    "cin": "L17111GJ1984PLC045995",
+    "company_name": "NAKODA LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L17111GJ1986PLC048202",
+    "cin": "L17111GJ1986PLC048202",
+    "company_name": "RECRON SYNTHETICS LIMITED.",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L17119GJ1982PLC005424",
+    "cin": "L17119GJ1982PLC005424",
+    "company_name": "RAGHUVIR SYNTHETICS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L17119GJ1982PLC009258",
+    "cin": "L17119GJ1982PLC009258",
+    "company_name": "AMBASSADOR INTRA HOLDINGS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L17119GJ1986PLC009009",
+    "cin": "L17119GJ1986PLC009009",
+    "company_name": "BISIL PLAST LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L17119GJ1986PLC009152",
+    "cin": "L17119GJ1986PLC009152",
+    "company_name": "BAHUMA POLYTEX LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L17239GJ1985PLC007829",
+    "cin": "L17239GJ1985PLC007829",
+    "company_name": "SHRI JAGDAMBA POLYMERS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L18119GJ1984PLC006922",
+    "cin": "L18119GJ1984PLC006922",
+    "company_name": "JINDAL HOTELS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L19116GJ1983FLC006516",
+    "cin": "L19116GJ1983FLC006516",
+    "company_name": "SOMPLAST LEATHER INDUSTRIES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L20299GJ1985PLC008047",
+    "cin": "L20299GJ1985PLC008047",
+    "company_name": "MILTON INDUSTRIES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L20310GJ1984PLC006994",
+    "cin": "L20310GJ1984PLC006994",
+    "company_name": "SARIGAM STEELS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L21010GJ1986PLC008772",
+    "cin": "L21010GJ1986PLC008772",
+    "company_name": "RAINBOW PAPERS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L23200GJ1985PLC008013",
+    "cin": "L23200GJ1985PLC008013",
+    "company_name": "ADVANCE PETROCHEMICALS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L23209GJ1982PLC005062",
+    "cin": "L23209GJ1982PLC005062",
+    "company_name": "PANAMA PETROCHEM LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24100GJ1982PLC005302",
+    "cin": "L24100GJ1982PLC005302",
+    "company_name": "OSIAN INDUSTRIES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24100GJ1983PLC006513",
+    "cin": "L24100GJ1983PLC006513",
+    "company_name": "GHCL LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24100GJ1984PLC111413",
+    "cin": "L24100GJ1984PLC111413",
+    "company_name": "MEDICO INTERCONTINENTAL LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24100GJ1985PLC007753",
+    "cin": "L24100GJ1985PLC007753",
+    "company_name": "GUJARAT TERCE LABORATORIES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24110GJ1982PLC005057",
+    "cin": "L24110GJ1982PLC005057",
+    "company_name": "VIVANZA BIOSCIENCES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24110GJ1984PLC007301",
+    "cin": "L24110GJ1984PLC007301",
+    "company_name": "AARTI INDUSTRIES LTD",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24110GJ1985PLC008225",
+    "cin": "L24110GJ1985PLC008225",
+    "company_name": "SKYLEAD CHEMICALS LTD",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24110GJ1986PLC008634",
+    "cin": "L24110GJ1986PLC008634",
+    "company_name": "CHEMIESYNTH (VAPI) LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24110GJ1986PLC008924",
+    "cin": "L24110GJ1986PLC008924",
+    "company_name": "YOGI HEALTHCARE LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24110GJ1986PLC009003",
+    "cin": "L24110GJ1986PLC009003",
+    "company_name": "BODAL CHEMICALS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24110GJ1986PLC009140",
+    "cin": "L24110GJ1986PLC009140",
+    "company_name": "JUPITER BIOTECH LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24117GJ1985PLC007985",
+    "cin": "L24117GJ1985PLC007985",
+    "company_name": "GBL INDUSTRIES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24219GJ1985PLC025132",
+    "cin": "L24219GJ1985PLC025132",
+    "company_name": "UPL LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24230GJ1983PLC006329",
+    "cin": "L24230GJ1983PLC006329",
+    "company_name": "DISHMAN PHARMACEUTICALS AND CHEMICALSLIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24230GJ1984PLC007540",
+    "cin": "L24230GJ1984PLC007540",
+    "company_name": "LINK PHARMACHEM LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24231GJ1982PLC005012",
+    "cin": "L24231GJ1982PLC005012",
+    "company_name": "GUJARAT BINIL CHEMICALS LTD",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24231GJ1985PLC007664",
+    "cin": "L24231GJ1985PLC007664",
+    "company_name": "ZORA PHARMA LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24240GJ1985PLC008282",
+    "cin": "L24240GJ1985PLC008282",
+    "company_name": "PARAMOUNT COSMETICS (INDIA) LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24294GJ1982PLC048201",
+    "cin": "L24294GJ1982PLC048201",
+    "company_name": "INDIA POLYFIBRES LIMITED.",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L24299GJ1982PLC005425",
+    "cin": "L24299GJ1982PLC005425",
+    "company_name": "ECLAT CHEMICALS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L25199GJ1986PLC009071",
+    "cin": "L25199GJ1986PLC009071",
+    "company_name": "TIRUPATI FOAM LTD",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L25200GJ1984PLC050560",
+    "cin": "L25200GJ1984PLC050560",
+    "company_name": "GOPALA POLYPLAST LTD",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L25200GJ1985PLC007746",
+    "cin": "L25200GJ1985PLC007746",
+    "company_name": "PROMACT IMPEX LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L25209GJ1984PLC007252",
+    "cin": "L25209GJ1984PLC007252",
+    "company_name": "NEELNANDAN POLYMERS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L25209GJ1986PLC009021",
+    "cin": "L25209GJ1986PLC009021",
+    "company_name": "TIRTH PLASTIC LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L26921GJ1985PLC008196",
+    "cin": "L26921GJ1985PLC008196",
+    "company_name": "BELL CERAMICS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L26931GJ1986PLC102350",
+    "cin": "L26931GJ1986PLC102350",
+    "company_name": "RESTILE CERAMICS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L26940GJ1983PLC006400",
+    "cin": "L26940GJ1983PLC006400",
+    "company_name": "SOMANI CEMENT COMPANY LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L27100GJ1984PLC007185",
+    "cin": "L27100GJ1984PLC007185",
+    "company_name": "MARDIA STEEL LTD.",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L27100GJ1985PLC008286",
+    "cin": "L27100GJ1985PLC008286",
+    "company_name": "CREATIVE CASTINGS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L27100GJ1986PLC009212",
+    "cin": "L27100GJ1986PLC009212",
+    "company_name": "RAJOO ENGINEERS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L27109GJ1986PLC008770",
+    "cin": "L27109GJ1986PLC008770",
+    "company_name": "MERCURY METALS LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L27209GJ1984PLC098951",
+    "cin": "L27209GJ1984PLC098951",
+    "company_name": "R K MANUFACTURING CO LTD",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L29199GJ1984PLC007130",
+    "cin": "L29199GJ1984PLC007130",
+    "company_name": "GUJARAT CRAFT INDUSTRIES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L29199GJ1984PLC007177",
+    "cin": "L29199GJ1984PLC007177",
+    "company_name": "SHRI KHODIYAR INDUSTRIES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  },
+  {
+    "company_id": "COMP_L29199GJ1984PLC007195",
+    "cin": "L29199GJ1984PLC007195",
+    "company_name": "AMRADEEP INDUSTRIES LIMITED",
+    "company_status": "Active",
+    "has_local_docs": false,
+    "doc_dir": null
+  }
+]
